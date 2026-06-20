@@ -22,7 +22,7 @@ COPY tests ./tests
 
 # устанавливаем зависимости проекта
 RUN pip install --no-cache-dir --upgrade pip \
- && pip install --no-cache-dir -e .
+ && pip install --no-cache-dir .
 
 
 # =========================
@@ -43,6 +43,8 @@ COPY --from=builder /usr/local /usr/local
 # копируем код
 COPY src ./src
 COPY tests ./tests
+
+RUN pip install --no-cache-dir ".[test]"
 
 ENV PYTHONUNBUFFERED=1
 
