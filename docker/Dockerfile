@@ -17,7 +17,7 @@ COPY src ./src
 
 # устанавливаем зависимости проекта
 RUN pip install --no-cache-dir --upgrade pip \
- && pip install --no-cache-dir .
+ && pip install --no-cache-dir ".[test]"
 
 
 # =========================
