@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
 # копируем проект
 COPY pyproject.toml .
 COPY src ./src
+COPY tests ./tests
 
 # устанавливаем зависимости проекта
 RUN pip install --no-cache-dir --upgrade pip \
@@ -37,6 +38,7 @@ COPY --from=builder /usr/local /usr/local
 
 # копируем код
 COPY src ./src
+COPY tests ./tests
 
 ENV PYTHONUNBUFFERED=1
 
