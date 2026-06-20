@@ -58,6 +58,7 @@ jobs:
         with:
           host: 212.192.134.135
           username: linnaeus
+          port: 58529
           key: ${{ secrets.SSH_KEY }}
           script: |
             docker pull kubsu-app || true
