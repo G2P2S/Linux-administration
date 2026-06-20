@@ -47,6 +47,7 @@ COPY tests ./tests
 RUN pip install --no-cache-dir pytest pytest-asyncio httpx
 
 ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH=/app
 
 EXPOSE 8000
 
