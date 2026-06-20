@@ -7,6 +7,8 @@ WORKDIR /app
 
 ENV PYTHONPATH=/app
 
+ENV PYTHONUNBUFFERED=1
+
 # системные зависимости (нужны для psycopg)
 RUN apt-get update && apt-get install -y \
     gcc \
