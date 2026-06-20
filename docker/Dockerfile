@@ -44,7 +44,7 @@ COPY --from=builder /usr/local /usr/local
 COPY src ./src
 COPY tests ./tests
 
-RUN pip install --no-cache-dir ".[test]"
+RUN pip install --no-cache-dir pytest pytest-asyncio httpx
 
 ENV PYTHONUNBUFFERED=1
 
