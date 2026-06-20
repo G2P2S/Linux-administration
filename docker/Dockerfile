@@ -49,6 +49,6 @@ RUN pip install --no-cache-dir pytest pytest-asyncio httpx
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONPATH=/app
 
-EXPOSE 8000
+EXPOSE 58529
 
-CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "58529"]
